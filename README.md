@@ -1,9 +1,9 @@
 CiviCRM-Donor-Trends-Extension
 ==============================
-This is a CiviCRM extension that queries the CiviCRM database, displaying or producing CSV files from the results.
+Queries the contribute tables and displays (in table or CSV) information about donor activity in relation to the previous year(s), categorizing donors as new, lapsed, upgraded, downgraded, or maintained.
 
-* OVERVIEW calculates numbers for new, lapsed, upgraded, downgraded and maintained donors for each target year.
-* NEW, LAPSED, UPGRADED, DOWNGRADED, MAINTAINED include the breakdown of donors (+contact id, name, email, totals) that underly the numbers in overview.
+* OVERVIEW report calculates numbers for new, lapsed, upgraded, downgraded and maintained donors for each target year.
+* NEW, LAPSED, UPGRADED, DOWNGRADED, MAINTAINED reports include the breakdown of donors (+contact id, name, email, totals) that underly the numbers in overview.
 * The 'Group' select is optional and limits results to donors within a certain group. 
 
 definitions of donor groups:
