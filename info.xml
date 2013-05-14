@@ -3,6 +3,10 @@
   <file>donortrends</file>
   <name>Donor Trends</name>
   <description>Makes numbers that compare donor activity from year to year.</description>
+  <urls>
+    <url desc="Main Extension Page">http://civicrm.org/extensions/donor-trends-extension</url>
+    <url desc="Documentation">http://civicrm.org/extensions/donor-trends-extension</url>
+  </urls>
   <license>AGPLv3</license>
   <maintainer>
     <author>leez</author>
