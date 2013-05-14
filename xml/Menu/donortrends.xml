@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<menu>
+  <item>
+    <path>civicrm/trends</path>
+    <page_callback>CRM_Donortrends_Form_Trends</page_callback>
+    <title>Trends</title>
+    <access_arguments>access CiviCRM</access_arguments>
+  </item>
+</menu>
