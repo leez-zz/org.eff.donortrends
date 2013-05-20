@@ -91,7 +91,7 @@ class CRM_Donortrends_Form_Trends extends CRM_Core_Form {
       //new donors prep query: this one is easy lemon squeezy - get donors whose first contribution date is in the specified year
       $query_string = "SELECT cc.contact_id, MIN(cc.receive_date) AS receive_date FROM civicrm_contribution cc";  
       if($params['group']){
-        $group_filter = $params['group'];
+        $group_filter = (int)$params['group'];
         $query_string .= " LEFT JOIN civicrm_group_contact on cc.contact_id = civicrm_group_contact.contact_id
                           WHERE civicrm_group_contact.group_id = $group_filter";
       }  
@@ -102,7 +102,7 @@ class CRM_Donortrends_Form_Trends extends CRM_Core_Form {
       $query_string_where = " WHERE cc.receive_date >= %1 and cc.receive_date < %2";
       
       if($params['group']){
-        $group_filter = $params['group'];
+        $group_filter = (int)$params['group'];
         $query_string_2 .= " LEFT JOIN civicrm_group_contact ON cc.contact_id = civicrm_group_contact.contact_id";
         $query_string_where .= " AND civicrm_group_contact.group_id = $group_filter";
       }
@@ -186,7 +186,7 @@ class CRM_Donortrends_Form_Trends extends CRM_Core_Form {
                       LEFT JOIN civicrm_contact ON cc.contact_id = civicrm_contact.id
                       LEFT JOIN civicrm_email ON cc.contact_id = civicrm_email.contact_id AND civicrm_email.is_primary = '1'";
       if($params['group']){
-        $group_filter = $params['group'];
+        $group_filter = (int)$params['group'];
         $query_string .= " LEFT JOIN civicrm_group_contact on cc.contact_id = civicrm_group_contact.contact_id
                           WHERE civicrm_group_contact.group_id = $group_filter";
       }  
@@ -221,7 +221,7 @@ class CRM_Donortrends_Form_Trends extends CRM_Core_Form {
       $query_string_where = " WHERE cc.receive_date >= %1 and cc.receive_date < %2";
       
       if($params['group']){
-        $group_filter = $params['group'];
+        $group_filter = (int)$params['group'];
         $query_string .= " LEFT JOIN civicrm_group_contact ON cc.contact_id = civicrm_group_contact.contact_id";
         $query_string_where .= " AND civicrm_group_contact.group_id = $group_filter";
       }
